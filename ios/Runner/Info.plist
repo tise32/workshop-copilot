@@ -1,0 +1,4 @@
+<key>NSMicrophoneUsageDescription</key>
+<string>Ứng dụng cần micro để lắng nghe tiếng Trung trong công xưởng.</string>
+<key>NSSpeechRecognitionUsageDescription</key>
+<string>Ứng dụng dùng nhận diện giọng nói Apple để dịch thuật ngữ kỹ thuật.</string>
