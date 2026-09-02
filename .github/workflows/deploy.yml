@@ -22,7 +22,7 @@ jobs:
           channel: 'stable'
 
       - name: Generate Missing iOS Project Files
-        run: flutter create . --platforms=ios
+        run: flutter create . --project-name=workshop_copilot --platforms=ios
 
       - name: Configure Microphone & Speech Permissions
         run: |
