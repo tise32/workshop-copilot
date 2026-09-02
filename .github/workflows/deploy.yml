@@ -21,8 +21,19 @@ jobs:
           flutter-version: '3.19.x'
           channel: 'stable'
 
+      - name: Backup Custom Source Code
+        run: |
+          mkdir -p /tmp/backup_src
+          cp -r lib /tmp/backup_src/ || true
+          cp pubspec.yaml /tmp/backup_src/ || true
+
       - name: Generate Missing iOS Project Files
         run: flutter create . --project-name=workshop_copilot --platforms=ios
+
+      - name: Restore Custom Source Code
+        run: |
+          cp -r /tmp/backup_src/lib/* lib/ || true
+          cp /tmp/backup_src/pubspec.yaml . || true
 
       - name: Configure Microphone & Speech Permissions
         run: |
